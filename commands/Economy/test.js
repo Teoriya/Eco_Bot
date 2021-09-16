@@ -1,4 +1,4 @@
-const economy = require('../../economy')
+const scalable = require('../../scaling')
 
 module.exports = {
     aliases: ['t'],
@@ -12,12 +12,9 @@ module.exports = {
     cooldown: '5s',
     guildOnly: true,
     slash: false,
-    callback: async ({ args,text }) => {
-        console.log(args)
-        desiredArgs = text.split(/[ ]+/)
-        undesiredArgs = text.split(/ /g)
-        console.log("chahiye",desiredArgs)
-        console.log("nahi chahiye",undesiredArgs)
+    callback: async ({ message,args }) => {
+        guildId = message.guild.id
+        // console.log(args);
+        scalable.add({guildId,args});
     }
-
 }
