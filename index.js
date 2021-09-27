@@ -18,9 +18,9 @@ client.on('ready', () => {
         testServers:'884393176255848498' ,
         disabledDefaultCommands: [
              'language',
-        ]
+        ],
+        mongoUri: url
     })
-        .setMongoPath(url)
 })
 
 client.login(process.env.TOKEN1)
