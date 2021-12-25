@@ -16,9 +16,6 @@ client.on('ready', () => {
         defaultLangauge: 'english',
         ignoreBots: true,
         testServers:'884393176255848498' ,
-        disabledDefaultCommands: [
-             'language',
-        ],
         mongoUri: url
     })
 })

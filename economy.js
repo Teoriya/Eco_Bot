@@ -1,4 +1,3 @@
-const mongo = require('./utils/db-conn-manager')
 const profileSchema = require('./schemas/ecoschema')
 const { connBoilerPlate } = require('./utils/conn-util')
 
@@ -29,7 +28,7 @@ module.exports = {
       if (cachedValue || cachedValue == 0) {
         return cachedValue
       }
-      console.log('Running findOne()')
+      // console.log('Running findOne()')
       const result = await profileSchema.findOne({
         guildId,
         userId,
@@ -41,7 +40,7 @@ module.exports = {
       if (result) {
         coins = result.coins
       } else {
-        console.log('Inserting a document')
+        // console.log('Inserting a document')
         await new profileSchema({
           guildId,
           userId,
