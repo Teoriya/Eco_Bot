@@ -5,6 +5,7 @@ const pvcSchema = Schema({
   guildId: reqString,
   categId: reqString,
   chanId: reqString,
+  
 });
 
 module.exports = model('pvcSchema', pvcSchema);
