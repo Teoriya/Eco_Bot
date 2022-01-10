@@ -23,7 +23,7 @@ module.exports = {
         guildId= message.guild.id
         userId = message.author.id
 
-        userCoins =await  economy.getCoins({guildId,userId})
+        userCoins =await economy.getCoins({guildId,userId})
         
         
         //
